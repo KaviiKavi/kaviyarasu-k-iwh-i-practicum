@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Contacts Table
+    a.button(href="/create") + Add New Contact
+
+    if data && data.length
+      table
+        thead
+          tr
+            th First Name
+            th Last Name
+            th Hobby
+            th Age
+            th Action
+        tbody
+          each contact in data
+            tr
+              td= contact.properties.firstname || '—'
+              td= contact.properties.lastname || '—'
+              td= contact.properties.hobby || '—'
+              td= contact.properties.age || '—'
+              td
+                a.button.small(href=`/update?email=${contact.properties.email}`) Update
+    else
+      p No contacts found.

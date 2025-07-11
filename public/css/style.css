@@ -1,58 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-body, * {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  background-color: #f5f7fa;
+  color: #333;
 }
 
 h1 {
-    margin: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.cards {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.card {
-    flex-basis: 31%;
-    margin: 1rem 0.4rem;
-    padding: 1rem 0.4rem 2.5rem 0.4rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+th, td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
 }
 
-.card__email {
-    font-size: 1rem;
+th {
+  background-color: #f8c9cd;
+  font-weight: bold;
 }
 
-.form-wrapper {
-    font-size: 18px;
-    max-width: 768px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+tr:nth-child(even) {
+  background-color: #fafafa;
 }
 
-label, input {
-    margin-top: 5px;
-    display: block;
-    font-size: inherit;
+tr:hover {
+  background-color: #f0f8ff;
 }
 
-input[type="text"] {
-    padding: .25rem;
+a.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
-input[type="submit"] {
-    background-color: lightgrey;
-    border: none;
-    padding: .375rem 1rem;
-    margin-top: 10px;
+a.button:hover {
+  background-color: #0056b3;
+}
+
+a.button.small {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
 }
