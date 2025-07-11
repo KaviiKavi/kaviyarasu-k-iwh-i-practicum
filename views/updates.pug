@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= `${title}`
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Update Contact
+    a(href='/' style='display:inline-block; margin-bottom:1rem; text-decoration:none; color:#007bff') &#x2B05; Return to the homepage
+
+      form(method="POST")
+                label(for="firstname") First Name:
+                input(type="text", name="firstname", required, value=data.properties.firstname)
+
+                label(for="lastname") Last Name:
+                input(type="text", name="lastname", required, value=data.properties.lastname)
+
+                label(for="hobby") Hobby
+                input(type="text", name="hobby", required, value=data.properties.hobby)
+
+                label(for="age") Age
+                input(type="number", name="age", min="0", required, value=data.properties.age)
+                
+                button(type="submit") Update
+                a.button.secondary(href="/") Cancel
+

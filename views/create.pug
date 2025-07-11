@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title Create Contact
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Create New Contact
+    a(href='/' style='display:inline-block; margin-bottom:1rem; text-decoration:none; color:#007bff') &#x2B05; Return to the homepage
+
+    form(method="POST", action="/create")
+      label(for="firstname") First Name:
+      input(type="text", name="firstname", required)
+
+      label(for="lastname") Last Name:
+      input(type="text", name="lastname", required)
+
+      label(for="email") Email:
+      input(type="email", name="email", required)
+
+      button(type="submit") Create
+      a.button.secondary(href="/") Cancel
